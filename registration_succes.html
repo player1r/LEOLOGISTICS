@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="LeoLogistics">
+        <meta name="yandex-verification" content="7456ff8c7bf2a5b9" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $('a[href^="#"]').on('click', function(event) {
+                    event.preventDefault();
+    
+                    var sc = $(this).attr("href"),
+                        dn = $(sc).offset().top;
+                $('html, body').animate({scrollTop: dn}, 700);
+                });
+            });
+        </script>
+
+        <link rel="stylesheet" href="../assets/theme.min.css">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+        <title>Успешная регистрация | LeoLogistics</title>
+
+    </head>
+    <body>
+        
+        <div class="main_part_enter">
+            <div class="title_and_form">
+                <h1><a href="../index.html">LEOLOGISTICS</a></h1>
+                <h2 style="font-size: 30px; margin-bottom: 10px;">Регистрация прошла</br> успешно.</h2>
+                <h2>Для входа в Систему перейдите <a href="enter.html" style="text-decoration: underline;">по ссылке</a>.</h2>
+            </div>
+        </div>
+
+    </body>
+</html>

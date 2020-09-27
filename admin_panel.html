@@ -1,0 +1,164 @@
+<!-- <?php 
+            if($_COOKIE['user'] == ''){
+                header ("location:/static/html/enter.html");
+            }
+            else {        
+        ?>         -->
+            
+
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="LeoLogistics">
+        <meta name="yandex-verification" content="7456ff8c7bf2a5b9" />
+
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $('a[href^="#"]').on('click', function(event) {
+                    event.preventDefault();
+    
+                    var sc = $(this).attr("href"),
+                        dn = $(sc).offset().top;
+                $('html, body').animate({scrollTop: dn}, 700);
+                });
+            });
+        </script> -->
+
+        <link rel="stylesheet" href="../assets/theme.min.css">
+
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+        <title>Панель управления | LeoLogistics</title>
+
+    </head>
+    <body>
+
+        <div class="main_container">
+            <!-- Header -->
+            <div class="header">
+                <div class="container">
+                    <div class="title">
+                        <a href="../index_1.html" style="color: #000769; font-family: 'Oswald'; font-size: 20px;" onmouseover="this.style.color='#00a8f7';" onmouseout="this.style.color='#000769';">LEOLOGISTICS</a>
+                        <a href="admin_panel.html" style="font-family: 'Helvetica'; font-size: 24px; color: #000769;" onmouseover="this.style.color='#ff045a';" onmouseout="this.style.color='#000769';">DASHBOARD</a>
+                    </div>
+
+                    <div class="menu">
+                        <!-- <p style="color: #00a8f7; font-family: 'Helvetica';}"><?=$_COOKIE['user']?></p>
+                        <?php }?> -->
+                        <a href="/static/php/exit.php">Выйти</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="main_part_admin_panel">
+                <!-- Left border -->
+                <div class="border"></div>
+
+                <!-- Central part -->
+                <div class="center_part">
+                    <div id="okno">
+                        <div class="form_popup">
+                            <a href="#" class="close"><img src="../assets/images/delete.png" title="Закрыть форму" width="20px" height="20px"></a>
+                            <h1>Оформление заказа</h1>
+                            <form method="POST" action="#">
+                                <input type="text" name="detail" placeholder="Название детали"></br>
+                                <input type="number" name="kol_detail" placeholder="Количество деталей"></br>     
+                                <input type="text" name="id_storage" placeholder="Склад для хранения"></br> 
+                                <input type="text" name="id_costumer" placeholder="Заказчик"></br> 
+                                <input type="submit" value="Создать"> 
+                            </form>                            
+                        </div>
+                    </div>
+
+
+
+                    <!-- Navigation -->
+                    <div class="navigation">
+                        <a href="admin_panel_orders.php">Заказы</a>
+                        <a href="#">Детали</a>
+                        <a href="#">Склады</a>
+                        <a href="#">Поставщики</a>
+                        <a href="#">Заказчики</a>
+                        <a href="#">Пользователи</a>
+                    </div>
+
+                    <!-- dashboard -->
+                    <div class="dashboard">
+                        <h1>Реестр заказов</h1>
+
+                        <!-- Reestr -->
+                        <div class="reestr">     
+                            <div class="head">
+                                <h2>Количество записей: <?echo $general_number_orders;?></h2> 
+                                <a href="#okno">Создать заказ</a>   
+                            </div> 
+
+
+                    <!-- Stat data -->
+                    <div class="dashboard">
+                        <h1>Статистические данные</h1>
+
+                        <div class="statistica">
+                            <!-- Orders -->
+                            <div class="item">
+                                <h1>Заказы</h1>
+                                <h2>Всего: </h2>
+                                <h2 class="active">Активные: </h2>
+                                <h2 class="cancel">Отменённые: </h2>
+                            </div>
+
+                            <!-- Details -->
+                            <div class="item">
+                                <h1>Детали</h1>
+                                <h2>Всего: </h2>
+                            </div>
+
+                            <!-- Storage -->
+                            <div class="item">
+                                <h1>Склады</h1>
+                                <h2>Всего: </h2>
+                                <h2 class="active">Функционирующие: </h2>
+                            </div>
+
+                            <!-- Providers -->
+                            <div class="item">
+                                <h1>Поставщики</h1>
+                                <h2>Всего: </h2>
+                            </div>
+
+                            <!-- Costumers -->
+                            <div class="item">
+                                <h1>Заказчики</h1>
+                                <h2>Всего: </h2>
+                            </div>
+
+                            <!-- Users -->
+                            <div class="item">
+                                <h1>Пользователи</h1>
+                                <h2>Всего: </h2>
+                                <h2 class="active">Активные: </h2>
+                                <h2 class="no_active">Заблокированные: </h2>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
+
+                <!-- Right border -->
+                <div class="border"></div>
+            </div>
+        </div>
+        
+
+
+    </body>
+</html>

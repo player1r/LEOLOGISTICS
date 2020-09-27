@@ -1,0 +1,13 @@
+{
+  "compact": false,
+  "plugins" : [
+    "transform-object-rest-spread"
+  ],
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 3 versions", "ie >= 11"]
+      }
+    }]
+  ]
+}
